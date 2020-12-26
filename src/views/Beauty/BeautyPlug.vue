@@ -17,7 +17,6 @@
                 :key="value"
                 icon="photo-o"
                 text="文字"
-                
             />
         </van-grid>
 
