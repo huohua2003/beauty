@@ -31,7 +31,7 @@ export default {
     },
     methods: {
         gotoProject(index) {
-            console.log(this.url[index]);
+            // console.log(this.url[index]);
             this.$router.push(this.url[index-1]);
 
         },
@@ -44,7 +44,7 @@ export default {
                 "https://www.fastmock.site/mock/609eee78b06003f3fc8701aef257a08b/v1/index"
             )
             .then((ret) => {
-                console.log(ret.data);
+                // console.log(ret.data);
                 this.list = ret.data;
             });
             
