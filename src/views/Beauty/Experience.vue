@@ -62,7 +62,7 @@ export default {
           this.$http
             .get(url.getExperience)
             .then((ret) => {
-                console.log(ret.data);
+                // console.log(ret.data.list);
                 this.list = ret.data.list;
                 this.isLoading = false;
             });
@@ -88,7 +88,9 @@ export default {
             // this.$router.push("/project/detail");
         },
         gotoCard() {
-            localStorage.setItem("cart", this.list);
+            //存储localStorage
+            localStorage.setItem("cart", JSON.stringify(this.list));
+            console.log(this.list);
         },
     },
 }

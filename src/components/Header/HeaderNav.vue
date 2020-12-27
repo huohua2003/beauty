@@ -27,13 +27,13 @@ export default {
         window.addEventListener("scroll",()=>{
             //获取滚动跳的位置
             let top = document.documentElement.scrollTop;
-            console.log(top);
+            // console.log(top);
             if(top > 300){
                 this.show = true;
-                console.log(999);
+                // console.log(999);
             }else{
                 this.show = false;
-                console.log(555);
+                // console.log(555);
             }
         })
     },
