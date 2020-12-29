@@ -31,7 +31,7 @@ export default {
     },
     methods: {
         gotoProject(index) {
-            console.log(this.url[index]);
+            // console.log(this.url[index]);
             this.$router.push(this.url[index-1]);
 
         },
@@ -47,8 +47,7 @@ export default {
                 // console.log(ret.data);
                 this.list = ret.data;
             });
-            
-        
+             
     },
    
 };

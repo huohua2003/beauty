@@ -6,7 +6,7 @@
                 left-text="返回"
                 left-arrow
                 @click-left="onClickLeft"
-                class="title"
+                class="headerTitle"
             />
         </div>
     </div>
@@ -27,13 +27,13 @@ export default {
         window.addEventListener("scroll",()=>{
             //获取滚动跳的位置
             let top = document.documentElement.scrollTop;
-            console.log(top);
+            // console.log(top);
             if(top > 300){
                 this.show = true;
-                console.log(999);
+                // console.log(999);
             }else{
                 this.show = false;
-                console.log(555);
+                // console.log(555);
             }
         })
     },
@@ -45,7 +45,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-   .title {  
+   .headerTitle {  
         background-color: pink;
     }
     .header{
