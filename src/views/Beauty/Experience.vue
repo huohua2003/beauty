@@ -62,7 +62,7 @@ export default {
           this.$http
             .get(url.getExperience)
             .then((ret) => {
-                console.log(ret.data);
+                // console.log(ret.data);
                 this.list = ret.data.list;
                 this.isLoading = false;
             });

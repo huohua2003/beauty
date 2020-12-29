@@ -5,6 +5,8 @@ import Discounts from '@/views/My/Discounts';
 import Address from '@/views/My/Address';
 import Balance from '@/views/My/Balance';
 import Advice from '@/views/My/Advice';
+import Register from '@/views/My/Register';
+
 
 
 
@@ -16,6 +18,8 @@ var myRouter =[
        {path:"/address",component:Address},
        {path:"/balance",component:Balance},
        {path:"/advice",component:Advice},
+       {path:"/register",component:Register},
+
 ];
    
 
