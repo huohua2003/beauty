@@ -68,6 +68,7 @@ export default {
             obj:{}
         };
     },
+
     created() {
         this.$http.get(url.getExperience).then((ret) => {
             // console.log(ret.data.list);
@@ -76,6 +77,7 @@ export default {
         });
 
         //通知 App.vue 隐藏 底部导航
+
         // this.$store.commit("isShowFooter", false);
     },
     beforeDestroy() {
