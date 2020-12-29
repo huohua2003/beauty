@@ -47,8 +47,7 @@ export default {
                 // console.log(ret.data);
                 this.list = ret.data;
             });
-            
-        
+             
     },
    
 };

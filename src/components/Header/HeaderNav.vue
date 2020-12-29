@@ -6,7 +6,7 @@
                 left-text="返回"
                 left-arrow
                 @click-left="onClickLeft"
-                class="title"
+                class="headerTitle"
             />
         </div>
     </div>
@@ -45,7 +45,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-   .title {  
+   .headerTitle {  
         background-color: pink;
     }
     .header{
