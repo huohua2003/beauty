@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Footer/>
+    <Footer v-show="this.$store.state.isShowFooter"/>
     <router-view></router-view>
 
   </div>
@@ -16,8 +16,4 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
- 
- 
-}
 </style>

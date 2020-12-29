@@ -21,8 +21,8 @@ Vue.use(VueRouter)
 
 const routes = [
     ...beautyplugRouter,
-    foundRouter,
-    myRouter,
+    ...foundRouter,
+    ...myRouter,
     orderRouter,
     {path:'/',redirect:"/beautyplug"}
   
@@ -31,6 +31,17 @@ const router = new VueRouter({
   mode:'history',
   routes,
   base: process.env.BASE_URL,
+});
+// 个人中心路由守卫：除了设置都需要跳转到登录页面
+router.beforeEach((to,from,next)=>{
+  let arr = ["/discounts","/address","/balance","/advice",]
+  if(arr.includes(to.path) && !localStorage.getItem('jwt')){
+    // 去登录页面
+    router.push('/login');
+  }else{
+    next();
+  }
 })
+
 
 export default router

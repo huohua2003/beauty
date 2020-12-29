@@ -89,7 +89,7 @@ export default {
             if(num===0){
                 return false;
             }
-            this.$http.post("https://m.28sjw.com/order/getQR.php",`_s=Qqwsd&_f=${num}&_t=2`).then(ret=>{
+            this.$http.post("https://m.28sjw.com/order/getQR.php","_s=Qqwsd&_f=0.01&_t=2").then(ret=>{
                 // console.log(ret);
                 location.href="http:"+ret.qr_code
             })
