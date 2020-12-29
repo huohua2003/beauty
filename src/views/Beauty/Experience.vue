@@ -92,7 +92,6 @@ export default {
                             }
                         });
                         if (flag) {
-                            console.log("123");
                             this.$store.commit("addCart", el);
                             flag = false;
                         }
