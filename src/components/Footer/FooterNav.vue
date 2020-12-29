@@ -14,7 +14,7 @@
                 class="iconfont icon-74wodedingdan"
                 slot="icon"
                 />
-                <span>订单</span>
+                <span>购物车</span>
             </van-tabbar-item>
 
              <van-tabbar-item >
@@ -58,8 +58,6 @@ export default {
     created(){
         //根据页面的地址纠正 底部的索引
         // console.log(this.$route.path);
-
-   master
         this.active = this.url.indexOf(this.$route.path)>=0 ?this.url.indexOf(this.$route.path):0;
     },
     methods:{
