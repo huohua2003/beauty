@@ -1,6 +1,6 @@
 # beauty
 
-## Project setup
+## Project setup    
 ```
 npm install
 ```
