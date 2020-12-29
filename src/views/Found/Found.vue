@@ -1,25 +1,31 @@
 <template>
   
     <div class="fond" >
-      <div class="fond_top">发现，记录美好生活</div>
+
       <van-loading size="24px" vertical v-show='isLoding'>加载中...</van-loading>
-         <ul>
+
+      <van-grid :column-num="2">
+               <van-grid-item v-for="(item,index) in fondList" :key="index" >
+                   <van-image :src="item.picUrl" />
+                    <div  @click="tofondDetail(item.id)">{{item.fullName |wenzi}}</div>
+               </van-grid-item>
+     </van-grid>
+         <!-- <ul>
              <li v-for="(item,index) in fondList" :key="index">
                  <div class="picture"><img :src="item.picUrl" alt=""></div>
-                 <div>{{item.fullName}}</div>
-                <div class="font_main">
-                     <button @click="tofondDetail(item.id)">查看详情</button>
-                </div>
+                 <div  @click="tofondDetail(item.id)">{{item.fullName}}</div>
              </li>
-         </ul>
+         </ul> -->
     </div>
 
 </template>
 <script>
 
 import Vue from 'vue';
-import { Loading,Sticky } from 'vant';
+import { Loading,Sticky,Grid,GridItem} from 'vant';
 import uri from '@/config/url';
+Vue.use(Grid);
+Vue.use(GridItem);
 Vue.use(Sticky);
 Vue.use(Loading);
 export default {
@@ -46,6 +52,13 @@ created(){
          this.$router.push("/found/"+id)
         console.log(id);
        },
+   },
+   filters:{
+       wenzi(val){
+          let str="";
+          str=val.substr(0,18)+"...";
+           return str
+       }
    }
 };
 </script>
@@ -64,7 +77,6 @@ created(){
     font-weight: bold;
     position:fixed;
     top:0;
-    background: pink;
 }
 ul{
     margin-top: 14px;
@@ -74,6 +86,12 @@ ul{
 ul li{
     margin-top:6px;
 }
+.picture{
+    width:100%;
+    height:300px;
+}
 .picture img{
+    width: 100%;
+    height:100%;
 }
 </style>
