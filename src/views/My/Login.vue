@@ -65,7 +65,11 @@ export default {
   methods: {
     // values是表单的数据：
     onSubmit(values) {
+<<<<<<< HEAD
       // console.log( values);
+=======
+      console.log( values);
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f
       // 请求用户信息回来：
       this.$http.post("https://www.fastmock.site/mock/609eee78b06003f3fc8701aef257a08b/v1/beauty/usersIfo").then((ret) => {
         // console.log(ret);

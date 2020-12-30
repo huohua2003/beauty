@@ -1,5 +1,6 @@
 <<template>
     <div>
+<<<<<<< HEAD
     <div>
         <van-nav-bar
         title="设置"
@@ -82,3 +83,8 @@ export default {
   }
 };
 </script>
+=======
+        <div>我是优惠券页面</div>
+    </div>
+</template>
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f

@@ -1,5 +1,6 @@
 <template>
     <div>
+<<<<<<< HEAD
         <div style="height:50px">
             <div :class="{ header: show }">
                 <van-nav-bar
@@ -23,10 +24,24 @@
                     {{ item.title | parserTitle }}
                 </div>
             </van-grid-item>
+=======
+        <HeaderNav />
+        <!-- mian -->
+        <van-grid :gutter="10" :column-num="2" square >
+            <van-grid-item
+                v-for="value in 6"
+                :key="value"
+                icon="photo-o"
+                text="门店名称"
+            />
+            <!-- <van-image src="https://img.yzcdn.cn/vant/apple-1.jpg" /> -->
+
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f
         </van-grid>
     </div>
 </template>
 <script>
+<<<<<<< HEAD
 import url from "@/config/url";
 import HeaderNav from "@/components/Header/HeaderNav";
 import Vue from "vue";
@@ -34,10 +49,17 @@ import { Loading, NavBar, Toast, Grid, GridItem, Image } from "vant";
 
 Vue.use(NavBar);
 Vue.use(Toast);
+=======
+import HeaderNav from "@/components/Header/HeaderNav";
+
+import Vue from "vue";
+import { Grid, GridItem,Image } from "vant";
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f
 
 Vue.use(Grid);
 Vue.use(GridItem);
 Vue.use(Image);
+<<<<<<< HEAD
 Vue.use(Loading);
 export default {
     data() {
@@ -124,3 +146,11 @@ export default {
         top: 0;
     }
 </style>
+=======
+export default {
+    components: {
+        HeaderNav,
+    },
+};
+</script>
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f

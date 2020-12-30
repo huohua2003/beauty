@@ -48,6 +48,8 @@ export default {
                 this.list = ret.data;
             });
              
+            
+        
     },
    
 };

@@ -1,5 +1,6 @@
 <template>
     <div>
+<<<<<<< HEAD
         <!--  -->
         <div>
         <van-nav-bar
@@ -20,12 +21,16 @@
   @edit="onEdit"
 />
         </div>
+=======
+        <div>常用地址页面</div>
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f
     </div>
 </template>
 
 <script>
 // 地址栏：新建、更新、删除收货地址
 import Vue from 'vue';
+<<<<<<< HEAD
 import { AddressList ,Toast ,NavBar} from 'vant';
 Vue.use(AddressList);
 Vue.use(NavBar);
@@ -71,4 +76,11 @@ export default {
     },
   },
 };
+=======
+import { AddressEdit } from 'vant';
+Vue.use(AddressEdit);
+export default {
+    
+}
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f
 </script>
