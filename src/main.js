@@ -17,6 +17,7 @@ if(jwt){
 if(cart){
   store.commit("setCart",cart);
 }
+
 new Vue({
   router,
   store,

@@ -12,4 +12,5 @@ export default {
 
     //彩妆商品 
     getCaiShop:url + "/cai2",
+    getOrder:url+"/2",
 }

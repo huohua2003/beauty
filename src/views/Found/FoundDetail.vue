@@ -1,5 +1,6 @@
 <template>
     <div>
+<<<<<<< HEAD
          <div class="deheader">
             <!-- 头部 -->
             <div class="degoBack" @click="goBack">
@@ -20,6 +21,9 @@
                 <div><span class="goodsName">商品产地：</span>{{showList.location}}</div>
                 <div><span class="goodsName">商品价格：</span>{{showList.price}}元</div>
         </div>
+=======
+        
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f
     </div>
 </template>
 
@@ -28,15 +32,20 @@ import uri from '@/config/url'
 export default {
     data(){
         return {
+<<<<<<< HEAD
             list:[],
             showList:{},
             isLoding:true,
+=======
+            list:{}
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f
         }
     },
     created(){
         this.$http.get(uri.getFond+`?id=${this.$route.params.id}`).then(ret=>{
             console.log(ret);
              this.list=ret.data.productList
+<<<<<<< HEAD
            this.list.forEach((el,index) => {
               if(el.id==this.$route.params.id){
                   this.showList=el
@@ -93,3 +102,10 @@ export default {
 }
 
 </style>
+=======
+             console.log(this.list);
+        })
+    },
+}
+</script>
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f

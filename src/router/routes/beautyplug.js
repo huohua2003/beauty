@@ -5,7 +5,7 @@ import Experience from "@/views/Beauty/Experience";
 import StoresView from "@/views/Beauty/StoresView";
 // import Project from "@/views/Beauty/Project/Project";
 // import List from '@/views/Beauty/Project/List'
-import Detail from "@/views/Beauty/Detail";
+// import Detail from "@/views/Beauty/Project/Detail";
 
 var beautyplugRouter = [
     // Beauty,
@@ -18,7 +18,6 @@ var beautyplugRouter = [
      //门店风采
      { path: "/storeview", component: StoresView },
      //上门服务
-     { path: "/outdoorserve", component: OutdoorServe },
      {path:"/outdoorserve/:id", component:Detail},
      // 美体师风采
      { path: "/division", component: Division },

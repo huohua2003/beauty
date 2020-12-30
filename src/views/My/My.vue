@@ -13,10 +13,14 @@
       />
        <img :src="userIfo.headIcon" v-if="userIfo.headIcon"    class="avator-icon"/>
       <div class="nick-name" v-if="!userIfo.mobile" @click="login">
+<<<<<<< HEAD
         立即登录 /
       </div>
        <div class="nick-name" v-if="!userIfo.mobile"  @click="register" >
         立即注册
+=======
+        立即登录
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f
       </div>
       <div class="nick-name" v-if="userIfo.mobile">
         {{ userIfo.mobile | userIfoFilter }}
@@ -151,9 +155,12 @@ export default {
     },
     Address(){
       this.$router.push("/address");
+<<<<<<< HEAD
     },
     register(){
       this.$router.push("/register");
+=======
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f
     }
   },
   created() {

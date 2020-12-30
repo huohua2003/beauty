@@ -1,5 +1,6 @@
 <<template>
     <div>
+<<<<<<< HEAD
     <!--头部 -->
     <div>
         <van-nav-bar
@@ -111,3 +112,8 @@ export default {
   }
 }
 </style>
+=======
+        <div>我是设置页面</div>
+    </div>
+</template>
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f

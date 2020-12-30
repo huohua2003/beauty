@@ -1,5 +1,6 @@
 <template>
     <div>
+<<<<<<< HEAD
         <div style="height:50px">
             <div :class="{ header: show }">
                 <van-nav-bar
@@ -36,33 +37,62 @@
                 </div>
             </van-grid-item>
         </van-grid>
+=======
+        <HeaderNav />
+        <!-- mian -->
+       <van-grid  :column-num="2" square>
+            <van-grid-item
+                v-for="(item,index) in list"
+                :key="index"
+                text="美体师"
+            >
+                <van-image class="img" :src="item.img" />
+                 <span>美体师</span>
+            </van-grid-item>
+            
+        
+        </van-grid> 
+       
+     
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f
     </div>
 </template>
 <script>
 import url from "@/config/url";
 import HeaderNav from "@/components/Header/HeaderNav";
 import Vue from "vue";
+<<<<<<< HEAD
 import { Loading, NavBar, Toast, Grid, GridItem, Image } from "vant";
+=======
+import { Grid, GridItem, Image } from "vant";
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f
 
 Vue.use(Grid);
 Vue.use(GridItem);
 Vue.use(Image);
+<<<<<<< HEAD
 
 Vue.use(NavBar);
 Vue.use(Toast);
 Vue.use(Loading);
+=======
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f
 export default {
     data() {
         return {
             list: [],
+<<<<<<< HEAD
             show: true,
             isLoading: true,
+=======
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f
         };
     },
     components: {
         HeaderNav,
     },
     created() {
+<<<<<<< HEAD
         this.$http.get(url.getFeedBack).then((ret) => {
             console.log(ret.html);
 
@@ -85,10 +115,28 @@ export default {
 
             // console.log(this.list);
         });
+=======
+        this.$http.get(url.getOrder).then((ret) => {
+            console.log(ret.html);  
+                      
+            //  this.list = ret.html;
+    
+            ret.html.forEach((v) => {
+                this.list.push(
+                    {img:v.img310.img,}
+                );
+                
+            });
+                
+            console.log(this.list);
+        });
+        
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f
 
         //通知 App.vue 隐藏 底部导航
         // this.$store.commit("isShowFooter", false);
     },
+<<<<<<< HEAD
     mounted() {
         //监听滚动条的位置
         window.addEventListener("scroll", () => {
@@ -202,3 +250,13 @@ export default {
     margin-left: 60px;
 }
 </style>
+=======
+};
+</script>
+<style lang="scss" scoped>
+    .img{
+        width: 150px;
+        height: 150px;
+    }
+</style>
+>>>>>>> d343bdcb4d74f707cd9528d198064c8c1414b13f
