@@ -1,6 +1,6 @@
 <template>
   
-    <div class="fond" >
+    <div >
 
       <van-loading size="24px" vertical v-show='isLoding'>加载中...</van-loading>
 
@@ -42,7 +42,7 @@ created(){
    methods:{
        getData(){
            this.$http.get(uri.getFond).then((ret)=>{
-                console.log(ret.data.productList);
+                // console.log(ret.data.productList);
                 this.fondList=ret.data.productList
                 // console.log(this.fondList);
             this.isLoding=false;
@@ -50,7 +50,7 @@ created(){
        },
        tofondDetail(id){
          this.$router.push("/found/"+id)
-        console.log(id);
+        // console.log(id);
        },
    },
    filters:{
@@ -64,10 +64,7 @@ created(){
 </script>
 
 <style lang="scss" scoped>
-.fond{
-    margin-top: 40px;
-    margin-bottom:70px;
-}
+
 .fond_top{
     width:100%;
     height:40px;
